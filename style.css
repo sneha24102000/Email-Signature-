@@ -1,0 +1,101 @@
+.demo{ background-color: #f10386; }
+.email-signature{
+    font-family: 'Be Vietnam', sans-serif;
+    background: #fff;
+    padding: 25px 45% 25px 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.email-signature:before,
+.email-signature:after{
+    content: "";
+    background: linear-gradient(to top, #ad5389, #3c1053);
+    width: 45%;
+    height: 100%;
+    border-radius: 50% 0 0 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.email-signature:after{
+    background: linear-gradient(to bottom, #ad5389, #3c1053);
+    right: -20px;
+    z-index: 0;
+}
+.email-signature .signature-icon{
+    height: 160px;
+    width: 160px;
+    border: 8px solid #3c1053;
+    border-radius: 20px 20px;
+    transform: translateY(-50%);
+    overflow: hidden;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    z-index: 1;
+}
+.email-signature .signature-icon img{
+    height: auto;
+    width: 100%;
+}
+.email-signature .signature-details{
+    color: #3c1053;
+    margin: 0 0 15px;
+}
+.email-signature .title{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+.email-signature .post{
+    font-size: 17px;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: lowercase;
+}
+.email-signature .signature-content{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.email-signature .signature-content li{
+    color: #ad5389;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.email-signature .signature-content li:last-child{ margin-bottom: 0; }
+.email-signature .signature-content li span{
+    color: #fff;
+    background: #3c1053;
+    text-align: center;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+    border-radius: 5px;
+}
+@media screen and (max-width:576px) {
+    .email-signature{ padding: 220px 0 25px 0; }
+    .email-signature:before,
+    .email-signature:after{
+        width: 100%;
+        height: 45%;
+        border-radius: 0 0 50% 50%;
+    }
+    .email-signature:before{ background: linear-gradient(to left, #ad5389, #3c1053); }
+    .email-signature:after{
+        right: 0;
+        top: -20px;
+    }
+    .email-signature .signature-icon{
+        transform: translateX(-50%);
+        top: 5%;
+        left: 50%;
+    }
+    .email-signature .signature-details,
+    .email-signature .signature-content{
+        text-align: center;
+    }
+}
